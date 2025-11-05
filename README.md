@@ -40,6 +40,7 @@ pip install -r requirements.txt
 ## Executar o treinamento
 
 ```bash
+cd scinli-wct
 python train_wct.py
 ```
 
