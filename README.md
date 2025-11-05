@@ -54,10 +54,10 @@ Tokenizando textos...
 Treinando modelo base...
 Epoch 1: 100%|██████████████████████████████████████████████| 50/50 [01:18<00:00, 1.56s/it]
 Loss médio: 1.3981
-✅ Treinamento inicial concluído!
+Treinamento inicial concluído!
 ```
 
-🧩 Funcionamento do Código
+## Funcionamento do Código
 Entrada
 
 O modelo recebe duas sentenças científicas:
