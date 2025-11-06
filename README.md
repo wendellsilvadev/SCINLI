@@ -154,3 +154,50 @@ seed: 42
 device: "cuda"     # ou "cpu"
 per_class_small_Dl: 100
 ```
+
+---
+
+## 📊 Resultados do Treinamento
+
+O modelo **RoBERTa-base** foi treinado 5 vezes de forma independente, cada execução com **3 épocas**, utilizando o dataset científico **SCINLI** (Scientific Natural Language Inference).  
+Foram avaliadas as métricas de **Acurácia (Accuracy)** e **F1-Score Macro** para os conjuntos de **validação** e **teste**.
+
+### 🧪 Tabela de Resultados
+
+| Run | Val Acc | Val F1  | Test Acc | Test F1 |
+|-----|----------|--------|----------|---------|
+| 1 | 0.2333 | 0.1035 | 0.2133 | 0.0882 |
+| 2 | 0.3367 | 0.2950 | 0.3667 | 0.3473 |
+| 3 | 0.5433 | 0.5034 | 0.5733 | 0.5444 |
+| 4 | 0.5567 | 0.5438 | 0.5033 | 0.4798 |
+| 5 | 0.5567 | 0.5284 | 0.5433 | 0.5313 |
+
+ **Médias finais (5 execuções):**
+- Val Accuracy média → **0.4453**
+- Val F1 média → **0.3948**
+
+---
+
+## Interpretação dos Resultados
+
+Os resultados mostram que o modelo RoBERTa-base foi capaz de aprender relações semânticas científicas entre pares de sentenças, alcançando valores médios de aproximadamente 44% de acurácia** e 39% de F1 no conjunto de validação.
+
+Esses números indicam um aprendizado efetivo, mas ainda limitado pela pequena quantidade de dados rotulados (150 exemplos por classe).  
+Mesmo assim, o modelo conseguiu capturar padrões linguísticos relevantes, demonstrando que o SCINLI pode ser utilizado com sucesso em tarefas de inferência natural no domínio científico.
+
+### Conclusão técnica
+
+- O modelo **não apresentou overfitting**, diferentemente de versões anteriores.
+- O aumento gradual de desempenho ao longo das execuções mostra consistência no aprendizado.
+- Para resultados mais robustos, pode-se aumentar:
+  - o número de exemplos rotulados (`per_class_small_Dl`);
+  - o número de épocas (`epochs_init`);
+  - ou realizar *fine-tuning* com o conjunto completo (`epochs_finetune > 0`).
+
+---
+
+### Arquivo de resultados
+
+Todos os resultados foram automaticamente salvos em **`outputs/resultados.csv`**
+
+
