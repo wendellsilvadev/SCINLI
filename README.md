@@ -157,12 +157,12 @@ per_class_small_Dl: 100
 
 ---
 
-## 📊 Resultados do Treinamento
+## Resultados do Treinamento
 
 O modelo **RoBERTa-base** foi treinado 5 vezes de forma independente, cada execução com **3 épocas**, utilizando o dataset científico **SCINLI** (Scientific Natural Language Inference).  
 Foram avaliadas as métricas de **Acurácia (Accuracy)** e **F1-Score Macro** para os conjuntos de **validação** e **teste**.
 
-### 🧪 Tabela de Resultados
+### Tabela de Resultados
 
 | Run | Val Acc | Val F1  | Test Acc | Test F1 |
 |-----|----------|--------|----------|---------|
